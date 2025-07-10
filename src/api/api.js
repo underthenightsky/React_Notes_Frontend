@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL =import.meta.env.VITE_BACKEND_URL ;
+const API_URL =import.meta.env.MODE ==="development"?"http://localhost:5000/notes":"/notes" ;
 
 export const getNotes = async (params = {}) => await axios.get(API_URL, { params });
 export const createNote = async (note) => await axios.post(API_URL, note).then();
